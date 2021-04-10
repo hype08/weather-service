@@ -1,9 +1,13 @@
-import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import Layout from '../components/Layout'
 
+const WeatherApp = dynamic(() => import('@/components/Home'), {
+  ssr: false,
+})
+
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
+  <Layout title="Weather Boi">
+    <WeatherApp />
   </Layout>
 )
 
