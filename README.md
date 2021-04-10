@@ -1,41 +1,58 @@
-# TypeScript Next.js example
+# Weather As a Service
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+## A helpful app that forecasts real-time weather by city. 🌤️
 
-## Deploy your own
+This is my personal take-home test as application for Intermediate Full-Stack Engineer at [Thinkific](https://www.thinkific.com/):
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+#### Please visit the project [here](https://weather-service.vercel.app/) ✨
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+&nbsp;
 
-## How to use it?
+## Table of Contents
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+- [Overview](#overview)
+  - [Built With](#built-with)
+  - [Objectives](#objectives)
+- [Getting Started](#getting-started)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
+
+&nbsp;
+
+### Overview
+  - Built With
+    - [NextJS](https://nextjs.org/)
+    - [NextJS Typescript Boilerplate](https://github.com/vercel/next.js/tree/master/examples/with-typescript)
+
+#### Objectives
+- [ ] Fetch the current weather for a city.
+
+- Stretch  Goals
+  - [ ] Have a Simple UI. (Stretch)
+  - [ ] Have Authentication. (Stretch)
+  - [ ] Proxy a real weather API. (Stretch)
+
+&nbsp;
+
+## Getting Started
 
 ```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
+# Clone this repository
+$ git clone https://github.com/hype08/weather-service
+
+# Change directory
+$ cd weather-service
+
+# Start
+$ npm run dev
 ```
+&nbsp;
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Acknowledgements
 
-## Notes
+&nbsp;
 
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
+## Contact
 
-```
-npm install --save-dev typescript
-```
-
-To enable TypeScript's features, we install the type declarations for React and Node.
-
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
-
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+- GitHub [@hype08](https://github.com/hype08/)
+- Email [henry.zhang@hey.com](mailto:henry.zhang@hey.com)

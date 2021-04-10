@@ -4,7 +4,8 @@
 //
 // import { User } from 'path/to/interfaces';
 
-export type User = {
+export type Weather = {
   id: number
-  name: string
+  city: string
+  forecast: string
 }
