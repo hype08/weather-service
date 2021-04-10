@@ -49,6 +49,7 @@ $ npm run dev
 &nbsp;
 
 ## Acknowledgements
+- [How to get user location in React.js](https://dev.to/codebucks/how-to-get-user-s-location-in-react-js-1691)
 
 &nbsp;
 
