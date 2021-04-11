@@ -14,10 +14,13 @@
     "lint-staged": "^10.5.4",
     "next": "latest",
     "react": "^17.0.1",
+    "react-cool-onclickoutside": "^1.6.1",
     "react-dom": "^17.0.1",
-    "swr": "^0.5.5"
+    "swr": "^0.5.5",
+    "use-places-autocomplete": "^1.9.1"
   },
   "devDependencies": {
+    "@types/googlemaps": "^3.43.3",
     "@types/node": "^12.12.21",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",

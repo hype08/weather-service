@@ -30,7 +30,10 @@ const useForecast: UseForecast = (weatherId) => {
     revalidateOnFocus: false,
   })
 
-  const { data: locationData, error: locationError } = useSWR<LocationData, any>(
+  const { data: locationData, error: locationError } = useSWR<
+    LocationData,
+    any
+  >(
     currentLocation
       ? `/api/search?lat=${currentLocation.coords.latitude}&long=${currentLocation.coords.longitude}`
       : null,
@@ -47,8 +50,10 @@ const useForecast: UseForecast = (weatherId) => {
     targetId = locationData ? locationData[0].woeid : null
   }
 
-  const { data: forecastData, error: forecastError } = useSWR<ForecastData, any>(
-  targetId ? `/api/location?targetWoeid=${targetId}` : null, {
+  const { data: forecastData, error: forecastError } = useSWR<
+    ForecastData,
+    any
+  >(targetId ? `/api/woeid?targetWoeid=${targetId}` : null, {
     revalidateOnFocus: false,
   })
 

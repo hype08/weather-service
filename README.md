@@ -24,14 +24,15 @@ This is my personal take-home test as application for Intermediate Full-Stack En
     - [NextJS](https://nextjs.org/)
     - [NextJS Typescript Boilerplate](https://github.com/vercel/next.js/tree/master/examples/with-typescript)
     - [Open MetaWeather API](https://www.metaweather.com)
+    
 
 #### Objectives
-- [ ] Fetch the current weather for a city.
+- [x] Fetch the current weather for a city.
 
 - Stretch  Goals
   - [ ] Have a Simple UI. (Stretch)
   - [ ] Have Authentication. (Stretch)
-  - [ ] Proxy a real weather API. (Stretch)
+  - [x] Proxy a real weather API. (Stretch)
 
 &nbsp;
 
@@ -51,6 +52,7 @@ $ npm run dev
 
 ## Acknowledgements
 - [How to get user location in React.js](https://dev.to/codebucks/how-to-get-user-s-location-in-react-js-1691)
+- [Use-Places-Autocomplete Example](https://github.com/wellyshen/use-places-autocomplete)
 
 &nbsp;
 
