@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import Layout from '../components/Layout'
+import Layout from '@/components/Layout'
 
 const WeatherApp = dynamic(() => import('@/components/Home'), {
   ssr: false,

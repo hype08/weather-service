@@ -23,6 +23,7 @@ This is my personal take-home test as application for Intermediate Full-Stack En
   - Built With
     - [NextJS](https://nextjs.org/)
     - [NextJS Typescript Boilerplate](https://github.com/vercel/next.js/tree/master/examples/with-typescript)
+    - [Open MetaWeather API](https://www.metaweather.com)
 
 #### Objectives
 - [ ] Fetch the current weather for a city.
@@ -41,7 +42,7 @@ This is my personal take-home test as application for Intermediate Full-Stack En
 $ git clone https://github.com/hype08/weather-service
 
 # Change directory
-$ cd weather-service
+$ cd weather-service/app
 
 # Start
 $ npm run dev
