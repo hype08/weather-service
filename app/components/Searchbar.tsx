@@ -14,9 +14,7 @@ type Props = {
 }
 
 // This was taken and modified from use-places-autocomplete github example (see README acknowledgements)
-export const PlacesAutocomplete: React.FC<Props> = ({
-  onHandleSelect,
-}: Props) => {
+export const Searchbar: React.FC<Props> = ({ onHandleSelect }: Props) => {
   const {
     ready,
     value,

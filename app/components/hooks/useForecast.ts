@@ -1,6 +1,11 @@
+import searchResult from '@/data/searchResult.json'
+import forecasts from '@/data/forecast.json'
+
 import useSWR from 'swr'
 import { getCurrentLocation } from '@/helpers/getCurrentLocation'
 
+export type LocationData = typeof searchResult
+export type ForecastData = typeof forecasts
 export type CurrentLocation = {
   coords: {
     latitude: number
@@ -9,8 +14,6 @@ export type CurrentLocation = {
 }
 
 export type WeatherId = number // https://en.wikipedia.org/wiki/WOEID
-type LocationData = Object
-type ForecastData = Object
 
 type UseForecast = (
   weatherId?: WeatherId
@@ -53,7 +56,7 @@ const useForecast: UseForecast = (weatherId) => {
   const { data: forecastData, error: forecastError } = useSWR<
     ForecastData,
     any
-  >(targetId ? `/api/woeid?targetWoeid=${targetId}` : null, {
+  >(targetId ? `/api/woeid?id=${targetId}` : null, {
     revalidateOnFocus: false,
   })
 
