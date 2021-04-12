@@ -24,12 +24,10 @@ type UseForecast = (
 }
 
 const useForecast: UseForecast = (weatherId) => {
-  // Try to get location(s)
   const { data: currentLocation, error: currentLocationError } = useSWR<
     CurrentLocation,
     any
   >('test', getCurrentLocation, {
-    // Don't reval on window focus
     revalidateOnFocus: false,
   })
 
@@ -41,7 +39,6 @@ const useForecast: UseForecast = (weatherId) => {
       ? `/api/search?lat=${currentLocation.coords.latitude}&long=${currentLocation.coords.longitude}`
       : null,
     {
-      // Don't reval on window focus
       revalidateOnFocus: false,
     }
   )
