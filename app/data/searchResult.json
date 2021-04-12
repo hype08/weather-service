@@ -1,0 +1,72 @@
+[
+  {
+    "distance": 163082,
+    "title": "Boulder",
+    "location_type": "City",
+    "woeid": 2367231,
+    "latt_long": "40.02779,-105.252487"
+  },
+  {
+    "distance": 168046,
+    "title": "Denver",
+    "location_type": "City",
+    "woeid": 2391279,
+    "latt_long": "39.740009,-104.992264"
+  },
+  {
+    "distance": 176841,
+    "title": "Colorado Springs",
+    "location_type": "City",
+    "woeid": 2383489,
+    "latt_long": "38.833450,-104.821808"
+  },
+  {
+    "distance": 274548,
+    "title": "Cheyenne",
+    "location_type": "City",
+    "woeid": 2379552,
+    "latt_long": "41.134811,-104.821541"
+  },
+  {
+    "distance": 398707,
+    "title": "Santa Fe",
+    "location_type": "City",
+    "woeid": 2488867,
+    "latt_long": "35.666431,-105.972572"
+  },
+  {
+    "distance": 456626,
+    "title": "Albuquerque",
+    "location_type": "City",
+    "woeid": 2352824,
+    "latt_long": "35.084179,-106.648643"
+  },
+  {
+    "distance": 465561,
+    "title": "Salt Lake City",
+    "location_type": "City",
+    "woeid": 2487610,
+    "latt_long": "40.759499,-111.888229"
+  },
+  {
+    "distance": 745513,
+    "title": "Billings",
+    "location_type": "City",
+    "woeid": 2364254,
+    "latt_long": "45.783821,-108.505676"
+  },
+  {
+    "distance": 782834,
+    "title": "Mesa",
+    "location_type": "City",
+    "woeid": 2449808,
+    "latt_long": "33.417042,-111.831459"
+  },
+  {
+    "distance": 792703,
+    "title": "Phoenix",
+    "location_type": "City",
+    "woeid": 2471390,
+    "latt_long": "33.448261,-112.075768"
+  }
+]
