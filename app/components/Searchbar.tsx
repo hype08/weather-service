@@ -62,22 +62,33 @@ export const Searchbar: React.FC<Props> = ({ onHandleSelect }: Props) => {
       } = suggestion
 
       return (
-        <li key={place_id} onClick={handleSelect(suggestion)}>
+        <li
+          className="bg-white"
+          key={place_id}
+          onClick={handleSelect(suggestion)}
+        >
           <strong>{main_text}</strong> <small>{secondary_text}</small>
         </li>
       )
     })
 
   return (
-    <div ref={ref}>
-      <input
-        value={value}
-        onChange={handleInput}
-        disabled={!ready}
-        placeholder="Enter a location"
-      />
-      {/* We can use the "status" to decide whether we should display the dropdown or not */}
-      {status === 'OK' && <ul>{renderSuggestions()}</ul>}
+    <div className="z-50">
+      <div ref={ref}>
+        <input
+          className="bg-gray-100 w-auto rounded-0 shadow-lg p-3"
+          value={value}
+          onChange={handleInput}
+          disabled={!ready}
+          placeholder="Enter a location .."
+        />
+
+        {status === 'OK' && (
+          <ul className="absolute w-full mt-2 w-md bg-white shadow border-0 p-3">
+            {renderSuggestions()}
+          </ul>
+        )}
+      </div>
     </div>
   )
 }

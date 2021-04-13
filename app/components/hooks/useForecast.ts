@@ -2,8 +2,6 @@ import { ForecastData } from '@/types/ForecastData'
 import { LocationData } from '@/types/LocationData'
 import useSWR from 'swr'
 
-export type WeatherId = number // https://en.wikipedia.org/wiki/WOEID
-
 type UseForecast = (
   Array
 ) => {
