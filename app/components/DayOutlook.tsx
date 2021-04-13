@@ -1,4 +1,4 @@
-import { ForecastData } from '@/hooks/useForecast'
+import { ForecastData } from '@/types/ForecastData'
 import { format } from 'date-fns'
 
 type Props = {
@@ -13,8 +13,7 @@ const DayOutlook: React.FC<Props> = (props) => {
       <br />
       Status : {props.forecasts.consolidated_weather[0].weather_state_abbr}
       <br />
-      Temperature :
-      {props.forecasts.consolidated_weather[0].the_temp.toFixed(0)}
+      Temperature :{props.forecasts.consolidated_weather[0].the_temp.toFixed(0)}
       <br />
       timezone : {props.forecasts.timezone}
       <br />

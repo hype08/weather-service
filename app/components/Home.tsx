@@ -1,39 +1,55 @@
-import { useState, useEffect } from 'react'
-import fetch from 'node-fetch'
+import { useState } from 'react'
 import useForecast, { WeatherId } from '@/hooks/useForecast'
 import { Searchbar } from '@/components/Searchbar'
 import DayOutlook from '@/components/DayOutlook'
 import WeekOutlook from '@/components/WeekOutlook'
-import NearbyLocations from '@/components/NearbyLocations'
 
 const App: React.FC = () => {
-  const [weatherId, setWeatherId] = useState<WeatherId>()
-  const { locations, forecasts, error } = useForecast(weatherId)
+  const [geo, setGeo] = useState([37.39999, -122.079552]) // Default is Cupertino, CA
+  const { forecasts, error } = useForecast(geo)
+
+  const allowPermission = async (pos: GeolocationPosition) => {
+    const { longitude, latitude } = pos.coords
+    setGeo([latitude, longitude])
+  }
+
+  const handlePermission = () => {
+    navigator.permissions
+      .query({ name: 'geolocation' })
+      .then(function (result) {
+        if (result.state == 'prompt' || 'granted') {
+          navigator.geolocation.getCurrentPosition(allowPermission)
+        }
+      })
+  }
 
   const handleSelect = async ({ lat, lng }) => {
-    // console.log(lat, lng)
     try {
       const res = await fetch(`/api/search/?lat=${lat}&long=${lng}`)
       const data = await res.json()
-      setWeatherId(data[0].woeid)
-      console.log(data)
+      const geoArray = data[0].latt_long.split(',')
+      setGeo([parseFloat(geoArray[0]), parseFloat(geoArray[1])])
     } catch (error) {
-      console.log(error)
+      console.log('😱 Error: ', error)
     }
   }
 
-  if (error) return <p>error</p>
+  if (error) return <div>error</div>
 
-  if (!forecasts || !locations) return <p>loading...</p>
+  if (!forecasts)
+    return (
+      <div>
+        <button onClick={handlePermission}>Get Local Weather</button>
+        <Searchbar onHandleSelect={handleSelect} />
+      </div>
+    )
 
   return (
     <div>
+      <button onClick={handlePermission}>Get local weather</button>
       <Searchbar onHandleSelect={handleSelect} />
       <DayOutlook forecasts={forecasts} />
       <WeekOutlook forecasts={forecasts} />
-      <NearbyLocations locations={locations} />
-      <div>
-      </div>
     </div>
   )
 }

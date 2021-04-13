@@ -1,4 +1,4 @@
-import { ForecastData } from '@/hooks/useForecast'
+import { ForecastData } from '@/types/ForecastData'
 import { format } from 'date-fns'
 
 type Props = {
