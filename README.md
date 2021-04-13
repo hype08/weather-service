@@ -53,6 +53,7 @@ $ npm run dev
 ## Acknowledgements
 - [How to get user location in React.js](https://dev.to/codebucks/how-to-get-user-s-location-in-react-js-1691)
 - [Use-Places-Autocomplete Example](https://github.com/wellyshen/use-places-autocomplete)
+- [Weather Forecast Icons](https://dribbble.com/shots/14189824-Weather-Icons-Imminent-35-Icon-Free-Download)
 
 &nbsp;
 

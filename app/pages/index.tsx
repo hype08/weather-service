@@ -6,7 +6,7 @@ const WeatherApp = dynamic(() => import('@/components/Home'), {
 })
 
 const IndexPage = () => (
-  <Layout title="Weather Boi">
+  <Layout title="My Weather App">
     <WeatherApp />
   </Layout>
 )

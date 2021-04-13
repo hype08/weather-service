@@ -1,0 +1,32 @@
+[
+  { "Name": "Snow", "Abbreviation": "sn", "Icon": "/static/Snow_1.png" },
+  { "Name": "Sleet", "Abbreviation": "sl", "Icon": "/static/WinteryMix.png" },
+  { "Name": "Hail", "Abbreviation": "h", "Icon": "/static/Hail.png" },
+  {
+    "Name": "Thunderstorm",
+    "Abbreviation": "t",
+    "Icon": "/static/Thunder.png"
+  },
+  {
+    "Name": "Heavy Rain",
+    "Abbreviation": "hr",
+    "Icon": "/static/Rain_Heavy.png"
+  },
+  {
+    "Name": "Light Rain",
+    "Abbreviation": "lr",
+    "Icon": "/static/Rain_light.png"
+  },
+  { "Name": "Showers", "Abbreviation": "s", "Icon": "/static/Rain_Medium.png" },
+  {
+    "Name": "Heavy Cloud",
+    "Abbreviation": "hc",
+    "Icon": "/static/Wind.png"
+  },
+  {
+    "Name": "Light Cloud",
+    "Abbreviation": "lc",
+    "Icon": "/static/Cloud_Sun.png"
+  },
+  { "Name": "Clear", "Abbreviation": "c", "Icon": "/static/Sun.png" }
+]
