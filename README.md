@@ -53,6 +53,7 @@ $ npm run dev
 ## Acknowledgements
 - [How to get user location in React.js](https://dev.to/codebucks/how-to-get-user-s-location-in-react-js-1691)
 - [Use-Places-Autocomplete Example](https://github.com/wellyshen/use-places-autocomplete)
+- [Location Permissions API ](https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)
 
 &nbsp;
 

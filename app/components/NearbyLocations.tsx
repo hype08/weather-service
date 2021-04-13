@@ -7,7 +7,7 @@ const NearbyLocations: React.FC<Props> = (props) => {
   return (
     <div>
       {props.locations.slice(1).map((i) => {
-        return <div>{i.title}</div>
+        return <div key={i.title}>{i.title}</div>
       })}
     </div>
   )

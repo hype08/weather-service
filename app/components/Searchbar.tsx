@@ -74,7 +74,7 @@ export const Searchbar: React.FC<Props> = ({ onHandleSelect }: Props) => {
         value={value}
         onChange={handleInput}
         disabled={!ready}
-        placeholder="Enter a location"
+        placeholder="Or enter any location"
       />
       {/* We can use the "status" to decide whether we should display the dropdown or not */}
       {status === 'OK' && <ul>{renderSuggestions()}</ul>}
