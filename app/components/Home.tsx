@@ -10,7 +10,7 @@ const App: React.FC = () => {
   const [geo, setGeo] = useState([37.39999, -122.079552]) // Cupertino, CA
   const { forecasts, error } = useForecast(geo)
 
-  const allowPermission = async (pos: GeolocationPosition) => {
+  const allowPermission = async (pos) => {
     const { longitude, latitude } = pos.coords
     setGeo([latitude, longitude])
   }
