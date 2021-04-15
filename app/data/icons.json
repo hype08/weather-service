@@ -15,7 +15,7 @@
   {
     "Name": "Light Rain",
     "Abbreviation": "lr",
-    "Icon": "/static/Rain_light.png"
+    "Icon": "/static/Rain_Light.png"
   },
   { "Name": "Showers", "Abbreviation": "s", "Icon": "/static/Rain_Medium.png" },
   {

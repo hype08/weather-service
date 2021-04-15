@@ -8,7 +8,7 @@ type Props = {
 
 const DayOutlook: React.FC<Props> = ({ forecasts }) => {
   return (
-    <div className="lg:-ml-20 h-fullbg-no-repeat relative xl:pt-6  justify-items-center grid">
+    <div className="h-fullbg-no-repeat relative xl:pt-6  justify-items-center grid">
       <div className="relative z-10 text-gray-500">
         <div className=" xs:grid-cols-3 gap-4">
           <div className="lg:md:my-10 lg:mb-6 ">

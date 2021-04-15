@@ -76,7 +76,7 @@ export const Searchbar: React.FC<Props> = ({ onHandleSelect }: Props) => {
     <div className="z-50">
       <div ref={ref}>
         <input
-          className="bg-gray-100 w-auto rounded-0 shadow-lg p-3"
+          className="bg-gray-100 w-full rounded-0 shadow-lg p-3"
           value={value}
           onChange={handleInput}
           disabled={!ready}
@@ -84,7 +84,7 @@ export const Searchbar: React.FC<Props> = ({ onHandleSelect }: Props) => {
         />
 
         {status === 'OK' && (
-          <ul className="absolute w-full mt-2 w-md bg-white shadow border-0 p-3">
+          <ul className="absolute mt-2 mr-20 w-md bg-white px-4 pt-3 pb-20 shadow-xl">
             {renderSuggestions()}
           </ul>
         )}

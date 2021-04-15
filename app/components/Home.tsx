@@ -10,7 +10,7 @@ const App: React.FC = () => {
   const [geo, setGeo] = useState([37.39999, -122.079552]) // Cupertino, CA
   const { forecasts, error } = useForecast(geo)
 
-  const allowPermission = async (pos: GeolocationPosition) => {
+  const allowPermission = async (pos) => {
     const { longitude, latitude } = pos.coords
     setGeo([latitude, longitude])
   }
@@ -52,7 +52,8 @@ const App: React.FC = () => {
 
   return (
     <>
-      <nav id="header" className="w-full z-30 top-0 py-4">
+      {/* Navigation */}
+      <nav id="header" className="w-full z-30 top-0 py-5">
         <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 ">
           <div className="pl-4 text-2xl flex items-center ">
             <Link href="/">
@@ -93,6 +94,7 @@ const App: React.FC = () => {
             </button>
           </div>
 
+          {/* Mobile navigation */}
           <div
             className="w-full sm:flex sm:items-center sm:w-auto hidden mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20 -ml-20"
             id="nav-content"
@@ -100,7 +102,7 @@ const App: React.FC = () => {
             <ul className="list-reset sm:flex justify-end flex-1 items-center">
               <li className="">
                 <Searchbar onHandleSelect={handleSelect} />
-              </li>
+              </li>{' '}
               <li className="px-4">
                 <button
                   onClick={handlePermission}
@@ -127,14 +129,16 @@ const App: React.FC = () => {
         </div>
       </nav>
 
-      <section className="container mx-auto flex flex-wrap">
+      {/* Main Section */}
+      <section className="container flex flex-wrap">
         <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          {/* Day Forecast (left) */}
           <DayOutlook forecasts={forecasts} />
         </div>
-
         <div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
           <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden">
             <div className="flex items-center justify-center pb-2">
+              {/* Week Outlook and Extra info (right) */}
               <WeekOutlook forecasts={forecasts} />
             </div>
             <div className="flex items-center justify-center pb-10">
@@ -143,10 +147,6 @@ const App: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <footer className="w-full h-6 flex justify-center item-center mt-3 mb-10">
-        <div className="border-t text-center pt-5">By Henry</div>
-      </footer>
     </>
   )
 }

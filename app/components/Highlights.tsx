@@ -39,14 +39,14 @@ const WeekOutlook: React.FC<Props> = ({ forecasts }) => {
         </div>
         <div className="text-md text-gray-700 pt-5">
           <div className="font-medium text-md">Sunrise</div>
-          <span className="text-gray-400">
-            {format(new Date(forecasts.sun_rise), 'HH:MM')} AM
+          <span className="text-gray-400 font-bold">
+            {format(new Date(forecasts.sun_rise), 'HH:MM')}
           </span>
         </div>
         <div className="text-md text-gray-700 pt-5">
           <div className="font-medium text-md">Sunset</div>
-          <span className="text-gray-400">
-            {format(new Date(forecasts.sun_set), 'HH:MM')} PM
+          <span className="text-gray-400 font-bold">
+            {format(new Date(forecasts.sun_set), 'HH:MM')}
           </span>
         </div>
       </div>
